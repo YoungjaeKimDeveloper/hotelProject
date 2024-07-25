@@ -82,7 +82,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  transition: all 5s;
+  transition: all 0.2s;
 }
 .navigation-heading {
   font-family: "Josefin+Sans", sans-serif;
@@ -262,7 +262,6 @@ body {
   display: flex;
   background: lightgray;
   justify-content: space-between;
-
   width: 100vw;
   box-sizing: border-box;
 }
@@ -273,6 +272,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 50px 150px;
+  width: 50%;
 }
 .about-us-heading {
   color: #777;
@@ -501,12 +501,14 @@ body {
   background-color: white;
   position: relative;
   padding: 10px;
+  z-index: 0;
 }
 .customer-img {
   width: 30%;
   position: absolute;
   top: 10px;
   left: -30px;
+  border-radius: 20px;
 }
 .empty {
   width: 25%;
@@ -514,6 +516,180 @@ body {
 .customer_details {
   width: 73%;
 }
-/* end of customers */
+.customer_details_name {
+  font-family: "Josefin";
+  font-size: 14px;
+}
+.customer_details_type {
+  color: red;
+  opacity: 0.8;
+  font-weight: bold;
+}
+/* footer */
+.footer {
+  margin-left: 8rem;
+  background-color: #222;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 10px 100px;
+  box-sizing: border-box;
+  height: 25rem;
+}
+.footer-gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  width: 230px;
+  gap: 10px;
+}
+.footer-gallery-image {
+  width: 70px;
+}
+.footer-title-header {
+  font-size: 24px;
+  color: orange;
+}
+.footer-info {
+  display: flex;
+  flex-direction: column;
+}
+.footer-links {
+  text-align: center;
+}
+.footer-links-ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.footer-links-ul > li {
+  margin: 10px 0px;
+  text-align: left;
+}
+.footer-links-ul > li > a {
+  color: white;
+  text-decoration: none;
+}
+.footer-contact-link {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+.footer-contact-form {
+  margin-top: 20px;
+  position: relative;
+}
+.footer-contact-form-input {
+  width: 200px;
+  height: 20px;
+  padding: 7px;
+}
+.footer-contact-form-btn {
+  padding: 3px;
+  background-color: transparent;
+  color: white;
+  background-color: orange;
+  position: absolute;
+  width: 50px;
+  right: 1.1px;
+  border: none;
+  height: 100%;
+  font-size: 12px;
+  cursor: pointer;
+}
+/* End of Footer */
 
-/* end of common component */
+@media (max-width: 365px) {
+  .header {
+    margin-left: 8rem;
+    padding: 0;
+  }
+  .navigation-heading {
+    color: red;
+  }
+  .banner-heading {
+    font-size: 20px;
+  }
+  .brand {
+    display: flex;
+    justify-content: center;
+  }
+  .about-us {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+  }
+  .about-us-paragraph {
+    width: 80vw;
+    font-weight: bold;
+  }
+  .about-us-images {
+    width: 100px;
+  }
+  .image {
+    width: 100px;
+    height: 100px;
+  }
+  .rooms-cards-wrapper {
+    width: 80vw;
+  }
+  .room-card {
+    width: 100vh;
+    height: 50vh;
+  }
+  .room-img {
+    width: 100vw;
+  }
+  .customer-explnation {
+    font-size: 12px;
+  }
+  .customers-opinions {
+    display: flex;
+    gap: 20px;
+  }
+  .customers {
+    margin-left: 10rem;
+    padding-bottom: 150px;
+  }
+  .footer {
+    display: none;
+  }
+}
+@media (min-width: 366px) and (max-width: 1024px) {
+  .banner-heading {
+    font-size: 24px;
+  }
+  .about-us {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-us-images {
+    margin-bottom: 350px;
+  }
+  .common-heading {
+    font-size: 20px;
+  }
+  .rooms-cards-wrapper {
+    width: 80vw;
+  }
+  .customers {
+    width: 100vw;
+    height: 80vh;
+    margin-left: 15rem;
+  }
+  .customer-opinion {
+    margin: auto;
+    width: 80vw;
+  }
+  .customer-explnation {
+    font-size: 12px;
+  }
+  .customers-opinions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer {
+    display: none;
+  }
+}
